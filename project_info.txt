@@ -1,0 +1,17 @@
+# Project Info: Baboon Secretary Landing Page
+
+## Project Overview
+Landing page for Baboon Secretary (เลขาบาบูน), an AI assistant for Thai people to plan, summarize notes, and remind them of things.
+
+## Tech Stack
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS, shadcn/ui
+- **Rendering**: ISR, SSR
+- **SEO**: Meta tags, JSON-LD, hreflang (TH/EN)
+
+## File Structure
+- `README.md`: Project description and content.
+- `AGENTS.md`: Agent rules.
+- `TODOS.md`: Project tasks.
+- `CHANGELOG.md`: Changes log.
+- `project_info.txt`: Project metadata.

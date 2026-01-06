@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:fonts.google.com)",
+      "Bash(npm run build:*)",
+      "mcp__plugin_serena_serena__list_dir",
+      "Bash(npm install framer-motion)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "Bash(curl:*)",
+      "Bash(npm install:*)",
+      "WebFetch(domain:docs.google.com)",
+      "Bash(git add:*)"
+    ]
+  }
+}

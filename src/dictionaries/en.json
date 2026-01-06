@@ -1,0 +1,434 @@
+{
+    "navigation": {
+        "start": "Start Here",
+        "benefits": "Benefits",
+        "process": "Process",
+        "compare": "Compare",
+        "whyUs": "Why Us",
+        "pricing": "Pricing",
+        "faqs": "FAQs",
+        "aboutUs": "About Us",
+        "contactUs": "Contact Us",
+        "viewPlans": "View Plans"
+    },
+    "hero": {
+        "badge": "New",
+        "badgeText": "Sign up to let AI remember your style",
+        "title": "Baboon Secretary — Your AI Assistant|That Makes Work 90% Easier",
+        "subtitle": "For task planning, note summarization, and reminders. Built specifically for the Thai working context.",
+        "ctaPrimary": "Start free",
+        "ctaSecondary": "Watch demo"
+    },
+    "benefits": {
+        "title": "Works in real life, not just chatting",
+        "items": [
+            {
+                "title": "To-do + Reminders",
+                "description": "Summarize tasks + schedule reminders. Never miss a deadline."
+            },
+            {
+                "title": "Note Summarizer",
+                "description": "Actionable summaries + key highlights from chats and emails."
+            },
+            {
+                "title": "Memory Profile",
+                "description": "Remembers your preferences and style for tailored results."
+            }
+        ]
+    },
+    "slogan": {
+        "staticText": "Do Less,",
+        "rotatingWords": ["Earn More", "Work Smarter", "Live Better", "Save Time", "Stay Focused"]
+    },
+    "steps": {
+        "step1": {
+            "label": "Step 1",
+            "title": "Get started in 30 seconds",
+            "description": "Just log in and tell AI about your work and style preferences."
+        },
+        "step2": {
+            "label": "Step 2",
+            "title": "Plan, Summarize, Remind",
+            "description": "Let AI manage your To-dos, summarize notes from chats/emails, and set reminders."
+        },
+        "step3": {
+            "label": "Step 3",
+            "title": "AI learns your style",
+            "description": "The more you use it, the smarter it gets. Memory Profile delivers tailored results."
+        }
+    },
+    "faq": {
+        "badge": "FAQs",
+        "title": "Got questions? We have answers",
+        "items": [
+            {
+                "question": "What can Baboon help with?",
+                "answer": "Summarize news, plan daily tasks, and organize your schedules efficiently with maximum privacy."
+            },
+            {
+                "question": "Does it support other languages?",
+                "answer": "Primarily Thai, but it understands and summarizes English perfectly, making it ideal for professionals and students."
+            },
+            {
+                "question": "Will AI really remember my style?",
+                "answer": "Yes, AI creates a Memory Profile to remember your preferences, speech patterns, and goals for the most relevant results."
+            },
+            {
+                "question": "Is my data safe and private?",
+                "answer": "Absolutely. We use end-to-end encryption and never share your data with third parties. Your Memory Profile is stored securely and only you can access it."
+            },
+            {
+                "question": "How much does it cost?",
+                "answer": "Start free with 50 messages/day. Pro plan is 199฿/month with unlimited messages and Memory Profile. Enterprise plans available for teams."
+            },
+            {
+                "question": "Can I cancel my subscription anytime?",
+                "answer": "Yes, you can cancel anytime with no hidden fees. Your data remains accessible, and you can export your Memory Profile before canceling."
+            },
+            {
+                "question": "How is Baboon different from ChatGPT?",
+                "answer": "Baboon is built specifically for Thai context with task planning, reminders, and Memory Profile that learns your style. It's a productivity tool, not just a chatbot."
+            },
+            {
+                "question": "Do I need to install any app?",
+                "answer": "No installation required. Baboon works directly in your browser on any device—desktop, tablet, or mobile."
+            }
+        ]
+    },
+    "trust": {
+        "quote": "Baboon Secretary helps me focus more on what truly matters and never lets small details slip through.",
+        "author": "Narubet Angsirikulthomrong",
+        "role": "Co-founder, iReadCustomer",
+        "trustedBy": "TRUSTED BY LEADING BRANDS"
+    },
+    "footer": {
+        "description": "The AI assistant that understands you best, for superior productivity every day.",
+        "rights": "© 2026 BABOON SECRETARY. ALL RIGHTS RESERVED."
+    },
+    "compare": {
+        "title": "Why Baboon?",
+        "subtitle": "See how we stack up against other tools",
+        "competitors": {
+            "baboon": "Baboon",
+            "chatgpt": "ChatGPT",
+            "calendar": "Calendar Apps",
+            "notion": "Notion"
+        },
+        "features": {
+            "thai": "Thai Language AI",
+            "memory": "Memory Profile",
+            "reminders": "Smart Reminders",
+            "summarize": "Note Summary",
+            "privacy": "Privacy First",
+            "calendar": "Calendar Sync",
+            "voice": "Voice Input"
+        }
+    },
+    "pricing": {
+        "badge": "Pricing",
+        "title": "Simple, Transparent Pricing",
+        "subtitle": "Choose the plan that works best for you. Start free and upgrade as you grow.",
+        "perMonth": "/month",
+        "popular": "Most Popular",
+        "questionsNote": "Have questions about our pricing?",
+        "faqLink": "Check our FAQs",
+        "tiers": {
+            "free": {
+                "name": "Free",
+                "description": "Perfect for getting started",
+                "price": "0฿",
+                "features": [
+                    "Up to 50 messages per day",
+                    "Basic task planning",
+                    "Note summarization",
+                    "Thai & English support",
+                    "Web access"
+                ],
+                "cta": "Get Started Free"
+            },
+            "pro": {
+                "name": "Pro",
+                "description": "For power users who need more",
+                "price": "199฿",
+                "features": [
+                    "Unlimited messages",
+                    "Advanced task planning",
+                    "Priority note summarization",
+                    "Memory Profile enabled",
+                    "Calendar integration",
+                    "Priority support"
+                ],
+                "cta": "Start Pro Trial"
+            },
+            "enterprise": {
+                "name": "Enterprise",
+                "description": "For teams and organizations",
+                "price": "Custom",
+                "features": [
+                    "Everything in Pro",
+                    "Team collaboration",
+                    "Admin dashboard",
+                    "Custom integrations",
+                    "Dedicated support",
+                    "SLA guarantee"
+                ],
+                "cta": "Contact Sales"
+            }
+        }
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "lastUpdated": "Last updated: January 2026",
+        "introduction": "At Baboon Secretary, we take your privacy seriously. This Privacy Policy explains how we collect, use, protect, and handle your personal information when you use our AI assistant service.",
+        "dataCollection": {
+            "title": "Data Collection",
+            "description": "We collect information to provide and improve our services. The types of data we collect include:",
+            "items": [
+                "Account information (email, name, preferences)",
+                "Usage data (interactions with the AI assistant)",
+                "Memory Profile data (your preferences and style patterns)",
+                "Device and browser information for service optimization",
+                "Communication data when you contact our support"
+            ]
+        },
+        "dataUsage": {
+            "title": "How We Use Your Data",
+            "description": "Your data helps us deliver a personalized and efficient AI assistant experience:",
+            "items": [
+                "Personalize AI responses based on your Memory Profile",
+                "Improve task planning and reminder accuracy",
+                "Enhance note summarization quality",
+                "Provide customer support and respond to inquiries",
+                "Analyze usage patterns to improve our service"
+            ]
+        },
+        "dataSecurity": {
+            "title": "Data Security",
+            "description": "We implement robust security measures to protect your information:",
+            "items": [
+                "End-to-end encryption for all data transmissions",
+                "Secure cloud infrastructure with industry-standard protocols",
+                "Regular security audits and vulnerability assessments",
+                "Access controls and authentication mechanisms",
+                "Data backup and disaster recovery procedures"
+            ]
+        },
+        "yourRights": {
+            "title": "Your Rights",
+            "description": "You have control over your personal data. Your rights include:",
+            "items": [
+                "Access and download your personal data",
+                "Request correction of inaccurate information",
+                "Delete your account and associated data",
+                "Opt-out of non-essential data collection",
+                "Export your Memory Profile and preferences"
+            ]
+        },
+        "contact": {
+            "title": "Contact Us",
+            "description": "If you have questions about this Privacy Policy or our data practices, please contact us:",
+            "email": "privacy@baboonsec.com",
+            "address": "Bangkok, Thailand"
+        }
+    },
+    "terms": {
+        "title": "Terms of Service",
+        "lastUpdated": "Last updated: January 2026",
+        "sections": {
+            "termsOfUse": {
+                "title": "Terms of Use",
+                "content": "By accessing and using Baboon Secretary, you agree to be bound by these Terms of Service. Our service provides AI-powered productivity tools including task planning, note summarization, and reminder features. You must be at least 18 years old or have parental consent to use our services. These terms constitute a legally binding agreement between you and Baboon Secretary."
+            },
+            "userResponsibilities": {
+                "title": "User Responsibilities",
+                "content": "You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to use the service only for lawful purposes and in accordance with these terms. You must not attempt to gain unauthorized access to our systems, interfere with the service's operation, or use the service to harm others. You are solely responsible for the content you input into the system."
+            },
+            "serviceLimitations": {
+                "title": "Service Limitations",
+                "content": "Baboon Secretary is provided on an 'as is' and 'as available' basis. While we strive for high availability and accuracy, we do not guarantee uninterrupted service or error-free AI responses. The AI assistant is designed to help with productivity tasks but should not be relied upon for critical decision-making without human verification. Service features and availability may vary by subscription plan."
+            },
+            "intellectualProperty": {
+                "title": "Intellectual Property",
+                "content": "All content, features, and functionality of Baboon Secretary, including but not limited to text, graphics, logos, and software, are owned by Baboon Secretary and protected by intellectual property laws. You retain ownership of the content you create using our service. By using the service, you grant us a limited license to process your content solely to provide and improve our services."
+            },
+            "termination": {
+                "title": "Termination",
+                "content": "We reserve the right to suspend or terminate your access to the service at any time for violations of these terms or for any other reason at our sole discretion. Upon termination, your right to use the service will immediately cease. You may cancel your subscription at any time through your account settings. Data retention after termination is subject to our Privacy Policy."
+            },
+            "changesToTerms": {
+                "title": "Changes to Terms",
+                "content": "We may modify these terms at any time by posting the revised version on our website. Material changes will be communicated via email or through the service interface. Your continued use of the service after changes become effective constitutes acceptance of the new terms. We encourage you to review these terms periodically to stay informed of any updates."
+            }
+        },
+        "contact": {
+            "title": "Questions?",
+            "content": "If you have any questions about these Terms of Service, please contact us at legal@baboonsecretary.com"
+        }
+    },
+    "blog": {
+        "title": "Blog",
+        "readMore": "Read more",
+        "backToBlog": "Back to blog",
+        "publishedOn": "Published on",
+        "posts": [
+            {
+                "slug": "ai-thai-productivity",
+                "title": "AI and Productivity for Thai Professionals",
+                "excerpt": "Learn how AI can help you accomplish more in less time.",
+                "date": "2026-01-15"
+            },
+            {
+                "slug": "memory-profile-feature",
+                "title": "Memory Profile: Let AI Remember Your Work Style",
+                "excerpt": "Discover how Memory Profile helps AI understand and respond to your needs.",
+                "date": "2026-01-10"
+            },
+            {
+                "slug": "note-summarization-tips",
+                "title": "5 Tips for Effective Note Summarization",
+                "excerpt": "How to use AI to summarize meeting notes and emails concisely and completely.",
+                "date": "2026-01-05"
+            }
+        ]
+    },
+    "whyUs": {
+        "badge": "Why Choose Us",
+        "title": "Why Baboon Secretary?",
+        "subtitle": "We're not just another AI chatbot. We're your dedicated productivity partner built for Thai professionals.",
+        "reasons": [
+            {
+                "title": "Lightning Fast",
+                "description": "Get responses in seconds, not minutes. Our AI is optimized for speed without sacrificing quality."
+            },
+            {
+                "title": "Privacy First",
+                "description": "Your data stays yours. End-to-end encryption and strict data policies keep your information secure."
+            },
+            {
+                "title": "Built with Care",
+                "description": "Designed specifically for Thai working culture and context. We understand your needs."
+            },
+            {
+                "title": "Save 2+ Hours Daily",
+                "description": "Our users report saving over 2 hours every day on tasks like planning, summarizing, and organizing."
+            },
+            {
+                "title": "Growing Community",
+                "description": "Join thousands of Thai professionals who have transformed their productivity with Baboon."
+            },
+            {
+                "title": "Award-Winning AI",
+                "description": "Recognized for innovation in AI-powered productivity tools for Southeast Asian markets."
+            }
+        ],
+        "trustIndicator": "Trusted by 10,000+ Thai professionals and growing"
+    },
+    "aboutUs": {
+        "title": "About Us",
+        "subtitle": "Meet the team behind Baboon Secretary",
+        "mission": {
+            "title": "Our Mission",
+            "description": "We believe every Thai professional deserves an AI assistant that truly understands their work context, language nuances, and cultural needs. Baboon Secretary was born from this vision — to create the most intuitive, privacy-focused productivity tool for Thailand."
+        },
+        "story": {
+            "title": "Our Story",
+            "description": "Founded in 2025 in Bangkok, Baboon Secretary started as a simple idea: what if AI could actually understand how Thai people work? Our founders, frustrated with generic AI tools that didn't fit Thai workflows, set out to build something better. Today, we're proud to serve thousands of professionals across Thailand.",
+            "highlights": [
+                "Founded in Bangkok, Thailand",
+                "Team of 15+ AI and productivity experts",
+                "Backed by leading Thai investors",
+                "Serving 10,000+ active users"
+            ]
+        },
+        "values": {
+            "title": "Our Values",
+            "items": [
+                {
+                    "title": "User Privacy",
+                    "description": "Your data is sacred. We never sell or share your personal information."
+                },
+                {
+                    "title": "Thai-First Design",
+                    "description": "Every feature is designed with Thai users in mind, from language to workflow."
+                },
+                {
+                    "title": "Continuous Innovation",
+                    "description": "We constantly improve our AI to serve you better every day."
+                },
+                {
+                    "title": "Customer Success",
+                    "description": "Your productivity wins are our wins. We're here to help you succeed."
+                }
+            ]
+        },
+        "team": {
+            "title": "Leadership Team",
+            "members": [
+                {
+                    "name": "Narubet Angsirikulthomrong",
+                    "role": "Co-founder & CEO",
+                    "description": "10+ years in AI and tech startups"
+                },
+                {
+                    "name": "Baboon Team",
+                    "role": "Engineering & Product",
+                    "description": "15+ passionate builders and dreamers"
+                }
+            ]
+        },
+        "cta": {
+            "title": "Ready to boost your productivity?",
+            "button": "Get Started Free"
+        }
+    },
+    "contactUs": {
+        "title": "Contact Us",
+        "subtitle": "We'd love to hear from you. Get in touch with our team.",
+        "form": {
+            "fullName": "Full Name",
+            "fullNamePlaceholder": "Enter your full name",
+            "phone": "Phone Number",
+            "phonePlaceholder": "08X-XXX-XXXX",
+            "email": "Email Address",
+            "emailPlaceholder": "you@example.com",
+            "businessName": "Company / Organization",
+            "businessNamePlaceholder": "Your company name",
+            "businessType": "Business Type",
+            "businessTypePlaceholder": "e.g. E-commerce, Restaurant",
+            "budget": "Budget",
+            "budgetPlaceholder": "Your budget range",
+            "submit": "Send Message",
+            "sending": "Sending...",
+            "success": "Message sent successfully! We'll get back to you soon.",
+            "error": "Something went wrong. Please try again."
+        },
+        "info": {
+            "title": "Other Ways to Reach Us",
+            "email": {
+                "label": "Email",
+                "value": "center@ireadcustomer.com"
+            },
+            "support": {
+                "label": "Support",
+                "value": "center@ireadcustomer.com"
+            },
+            "line": {
+                "label": "LINE Official",
+                "value": "@ireadcustomer"
+            },
+            "address": {
+                "label": "Office",
+                "value": "Bangkok, Thailand"
+            },
+            "hours": {
+                "label": "Business Hours",
+                "value": "Mon - Fri, 9:00 - 18:00 (ICT)"
+            }
+        },
+        "faq": {
+            "title": "Looking for quick answers?",
+            "description": "Check out our FAQ section for common questions.",
+            "link": "Visit FAQs"
+        }
+    }
+}
