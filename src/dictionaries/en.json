@@ -14,7 +14,7 @@
     "hero": {
         "badge": "New",
         "badgeText": "Sign up to let AI remember your style",
-        "title": "Baboon Secretary — Your AI Assistant|That Makes Work 90% Easier",
+        "title": "Baboon — Your AI Secretary|Work 90% Easier",
         "subtitle": "For task planning, note summarization, and reminders. Built specifically for the Thai working context.",
         "ctaPrimary": "Start free",
         "ctaSecondary": "Watch demo"
@@ -31,8 +31,20 @@
                 "description": "Actionable summaries + key highlights from chats and emails."
             },
             {
+                "title": "Document Manager",
+                "description": "Organize, separate files, and find documents quickly."
+            },
+            {
                 "title": "Memory Profile",
                 "description": "Remembers your preferences and style for tailored results."
+            },
+            {
+                "title": "Income & Expense Tracker",
+                "description": "Track income and expenses, analyze spending, and plan finances smartly."
+            },
+            {
+                "title": "Friendly Advisor",
+                "description": "Chat about anything, get advice like from a friend who understands you."
             }
         ]
     },
@@ -41,20 +53,52 @@
         "rotatingWords": ["Earn More", "Work Smarter", "Live Better", "Save Time", "Stay Focused"]
     },
     "steps": {
+        "sectionTitle": "How It Works",
+        "sectionSubtitle": "Get started in 4 simple steps",
+        "common": {
+            "you": "You",
+            "yes": "Yes",
+            "edit": "Edit",
+            "automatic": "Automatic",
+            "summary": "Summary",
+            "categorized": "Categorized",
+            "remind": "Remind"
+        },
         "step1": {
             "label": "Step 1",
-            "title": "Get started in 30 seconds",
-            "description": "Just log in and tell AI about your work and style preferences."
+            "title": "Get Started",
+            "description": "Open the website or app and start using right away.",
+            "getStarted": "Get Started"
         },
         "step2": {
             "label": "Step 2",
-            "title": "Plan, Summarize, Remind",
-            "description": "Let AI manage your To-dos, summarize notes from chats/emails, and set reminders."
+            "title": "Send Data, AI Asks Follow-up",
+            "description": "Send slips, images, documents. Baboon asks clarifying questions to categorize correctly.",
+            "userMessage": "Transfer slip sent",
+            "clarifying": "Clarifying questions",
+            "question1": "Account: Kasikorn Bank, right?",
+            "question2": "Category: Food expenses, correct?"
         },
         "step3": {
             "label": "Step 3",
-            "title": "AI learns your style",
-            "description": "The more you use it, the smarter it gets. Memory Profile delivers tailored results."
+            "title": "Set Reminders",
+            "description": "Ask Baboon to remind you about important things. It will set notifications at your specified time.",
+            "userMessage": "Remind me to pay electric bill on 25th",
+            "reminderSet": "Reminder set!",
+            "date": "January 25, 2026",
+            "time": "Notify at 9:00 AM",
+            "task": "Pay electric bill"
+        },
+        "step4": {
+            "label": "Step 4",
+            "title": "Summary & Reminders",
+            "description": "Baboon summarizes data, categorizes, and sets reminders automatically.",
+            "summaryExample1": "Som's wedding gift",
+            "summaryExample2": "Food expense $10",
+            "categoryExample1": "Wedding",
+            "categoryExample2": "Food",
+            "remindExample1": "Client meeting 2PM",
+            "remindExample2": "Date with Fah"
         }
     },
     "faq": {

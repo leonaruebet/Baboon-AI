@@ -5,6 +5,106 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Changed
+- **Steps section**: Complete overhaul with vertical stepper design
+  - Redesigned from grid layout to vertical stepper on left + visualization area on right
+  - Now has 4 steps with improved visualizations:
+    - Step 1: "เริ่มใช้งาน" / "Get Started" - Desktop monitor mockup with:
+      - Browser window with traffic lights (red/yellow/green) and "baboon.ai" URL bar
+      - AI avatar (Bot icon) with green online indicator
+      - "เริ่มใช้งาน" / "Get Started" button with Play icon
+      - Animated cursor (SVG) pointing at start button with bounce animation
+      - Monitor stand with realistic perspective
+      - Sparkles decoration around monitor
+      - Enlarged dimensions: w-96 h-60 screen, scale-110 wrapper
+    - Step 2: "ส่งข้อมูล AI ถามกลับ" / "Send Data, AI Asks Follow-up" - Chat-style visualization showing:
+      - User sends transfer slip (sky-400 light blue bubble, right-aligned)
+      - User avatar with "คุณ"/"You" text (sky-500 background)
+      - AI asks clarifying questions ("Account: Kasikorn Bank?", "Category: Food expenses?")
+      - Yes/Edit confirmation buttons
+    - Step 3: "ตั้งเตือนความจำ" / "Set Reminders" - Chat-style visualization showing:
+      - User asks for reminder ("Remind me to pay electric bill on 25th") - sky-400 bubble
+      - User avatar with "คุณ"/"You" text
+      - AI confirms with date/time details (Calendar and Clock icons)
+      - Success indicator with CheckCircle
+    - Step 4: "สรุป & แจ้งเตือน" / "Summary & Notifications" - 3-column output cards:
+      - Summary card: "เงินแต่งงานน้องส้ม", "ค่าอาหาร 350 บาท"
+      - Categorized card: "งานแต่งงาน", "ค่าอาหาร"
+      - Remind card: "นัดลูกค้า 14:00", "นัดเดทน้องฟ้า"
+      - Bot with Brain icon processing indicator
+      - "อัตโนมัติ"/"Automatic" badge with Sparkles
+  - Vertical stepper with connecting lines between step indicators
+  - Step indicators: Numbers for pending, checkmarks for completed, ring highlight for active
+  - Clickable steps to switch visualization
+  - Visualization area with light orange gradient (`from-orange-100 via-orange-200/80 to-primary/20`)
+  - All visualizations use primary/orange colors only (except user: sky-400)
+  - Added new icons: MessageSquare, Clock, Calendar, CheckCircle
+  - Uses Bot icon from lucide-react instead of emoji
+  - Step label badge positioned at bottom-left of visualization area
+  - Responsive: stacks vertically on mobile, side-by-side on desktop (lg:grid-cols-[320px_1fr])
+  - **Full i18n support**: Replaced all inline `locale === "th"` checks with dictionary references
+  - Updated dictionaries (en.json, th.json) with comprehensive nested structure:
+    - `common`: you, yes, edit, automatic, summary, categorized, remind
+    - `step1`: label, title, description, getStarted
+    - `step2`: label, title, description, userMessage, clarifying, question1, question2
+    - `step3`: label, title, description, userMessage, reminderSet, date, time, task
+    - `step4`: label, title, description, summaryExample1/2, categoryExample1/2, remindExample1/2
+
+- **Benefits section**: Redesigned to match Steps component layout
+  - Removed Badge, kept centered title
+  - Changed from CardContent-based cards to transparent cards with large visual areas
+  - Added `aspect-square rounded-[3.5rem]` visual containers matching Steps style
+  - Created unique visual elements for each benefit (6 items total):
+    - To-do + Reminders: Task list with checkbox and bell icons
+    - Note Summarizer: Document with highlight indicators and sparkles
+    - Document Manager: Folder organization with separated file icons
+    - Memory Profile: Brain with progress indicators and sparkles
+    - Income & Expense Tracker: Wallet with income/expense rows (green/red indicators)
+    - Friendly Advisor: Chat bubbles with heart icon and typing indicator
+  - Changed to horizontal scrollable layout with infinite auto-scroll
+  - Cards fixed at `w-[280px]` with `flex-shrink-0`
+  - Added `scrollbar-hide` utility class to globals.css
+  - Auto-scroll animation (0.5px/frame) pauses on hover
+  - Seamless infinite loop (duplicates items for smooth reset)
+  - Right fade gradient with pulsing chevron hint
+  - Uses `useRef`, `useState`, `useEffect` for scroll control
+  - Custom cursor (🎨🐒) on hover using inline SVG data URL
+  - Added hover animation (`-translate-y-3` + shadow transition)
+  - Moved text content below visual area with `px-6` padding
+  - Added new icons: Wallet, TrendingUp, TrendingDown, MessageCircle, Heart
+
+- **Steps section**: Complete redesign with vertical stepper layout
+  - Left side: Vertical stepper with clickable step buttons
+  - Right side: Large visualization area showing active step
+  - Step indicators: Numbers for pending, checkmarks for completed, ring highlight for active
+  - Vertical connecting line between step indicators
+  - Interactive: clicking a step shows its visualization
+  - Step label badge in bottom-left of visualization area
+  - Decorative SVG illustration in top-right corner
+  - Section header with title and subtitle
+  - White card container with rounded corners and shadow
+  - Responsive: stacks vertically on mobile, side-by-side on desktop
+
+- **Slogan section**: Centered rotating words and custom cursor
+  - Added `items-center` to flex-col container
+  - Added `justify-center` to each rotating word span
+  - Added custom monkey cursor (🐵) on hover using inline SVG data URL
+
+- **Hero section**: Centered text and interactive monkey
+  - Changed title and subtitle from `text-left` to `text-center`
+  - Added `mx-auto` to subtitle for proper centering
+  - Added computer emoji (💻) that slides in + scales from 0 when hovering over monkey
+  - Uses React useState for hover state tracking
+
+### Added
+- **Steps section step 4**: Added 4th step and reordered steps
+  - Step 3: "Manage & Organize Documents" / "ช่วยจัดการเอกสาร แยกเอกสาร" (document visual with FolderOpen, Files, FileCheck icons)
+  - Step 4: "AI learns your style" / "AI จำสไตล์คุณได้" (brain visual with progress indicators)
+  - Updated `src/dictionaries/en.json` and `src/dictionaries/th.json`
+  - Updated `src/components/Steps.tsx` with matching visuals
+  - Grid layout changed from 3 columns to 4 columns (responsive: 1 col mobile, 2 col tablet, 4 col desktop)
+  - Container max-width increased from max-w-6xl to max-w-7xl
+
+### Changed
 - **Browser favicon**: Updated to baboon face emoji (🦧)
   - Created `src/app/icon.svg` with SVG emoji favicon
   - Added explicit `icons` metadata in layout.tsx for proper icon handling

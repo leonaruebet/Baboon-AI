@@ -4,7 +4,10 @@ import { Sparkles, Zap, Star } from "lucide-react";
 
 export function Slogan({ locale, dict }: { locale: string; dict: any }) {
     return (
-        <section className="py-24 px-6 relative overflow-hidden bg-primary">
+        <section
+            className="py-24 px-6 relative overflow-hidden bg-primary cursor-monkey"
+            style={{ cursor: `url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><text y='70' font-size='50'>🐵❤️</text></svg>") 50 50, auto` }}
+        >
             {/* Floating decorative elements */}
             <div className="absolute inset-0 pointer-events-none">
                 {/* Top left */}
@@ -70,11 +73,11 @@ export function Slogan({ locale, dict }: { locale: string; dict: any }) {
                         <span>{dict.staticText} </span>
                         <span className="relative inline-block overflow-hidden h-[1.5em] align-middle bg-white/20 rounded-lg px-3">
                             <span
-                                className="flex flex-col"
+                                className="flex flex-col items-center"
                                 style={{ animation: "slot-machine 10s ease-in-out infinite" }}
                             >
                                 {dict.rotatingWords?.map((word: string, i: number) => (
-                                    <span key={i} className="h-[1.5em] leading-[1.5em] text-white font-extrabold italic flex items-center whitespace-nowrap">
+                                    <span key={i} className="h-[1.5em] leading-[1.5em] text-white font-extrabold italic flex items-center justify-center whitespace-nowrap">
                                         {word}
                                     </span>
                                 ))}

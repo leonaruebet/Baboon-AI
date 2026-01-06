@@ -1,10 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Play, Bot } from "lucide-react";
 
 export function Hero({ locale, dict }: { locale: string; dict: any }) {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <section id="start" className="relative pt-40 pb-20 px-6 overflow-hidden">
             <div className="max-w-6xl mx-auto">
@@ -20,17 +23,33 @@ export function Hero({ locale, dict }: { locale: string; dict: any }) {
                 {/* Main content - Baboon on left, Text on right */}
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-12">
                     {/* Animated Baboon Mascot */}
-                    <div className="relative flex-shrink-0">
+                    <div
+                        className="relative flex-shrink-0"
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    >
                         {/* Main baboon with floating animation */}
                         <div
-                            className="text-7xl md:text-8xl lg:text-9xl select-none cursor-pointer transition-transform hover:scale-110"
+                            className="flex items-center gap-2 select-none cursor-pointer"
                             style={{
                                 animation: "float 3s ease-in-out infinite",
                                 transformStyle: "preserve-3d",
                                 perspective: "1000px",
                             }}
                         >
-                            🐵
+                            <span className="text-7xl md:text-8xl lg:text-9xl transition-transform hover:scale-110">
+                                🐵
+                            </span>
+                            {/* Computer emoji - appears on hover */}
+                            <span
+                                className={`text-4xl md:text-5xl transition-all duration-500 ease-out ${
+                                    isHovered
+                                        ? "opacity-100 scale-100 translate-x-0"
+                                        : "opacity-0 scale-0 -translate-x-4"
+                                }`}
+                            >
+                                💻
+                            </span>
                         </div>
                         {/* Shadow that animates with the baboon */}
                         <div
@@ -55,7 +74,12 @@ export function Hero({ locale, dict }: { locale: string; dict: any }) {
                     </div>
 
                     {/* Title and subtitle */}
-                    <div className="text-left">
+                    <div
+                        className="text-center transition-transform duration-500 ease-out"
+                        style={{
+                            transform: isHovered ? "translateX(8px)" : "translateX(0)",
+                        }}
+                    >
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.1] text-foreground">
                             {dict.title.split("|").map((part: string, i: number) => (
                                 <span key={i} className={i === 1 ? "text-primary block" : ""}>
@@ -64,7 +88,7 @@ export function Hero({ locale, dict }: { locale: string; dict: any }) {
                             ))}
                         </h1>
 
-                        <p className="max-w-xl text-lg text-foreground/60 leading-relaxed">
+                        <p className="max-w-xl text-lg text-foreground/60 leading-relaxed mx-auto">
                             {dict.subtitle}
                         </p>
                     </div>
