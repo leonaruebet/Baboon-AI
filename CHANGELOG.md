@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Changed
+- **Browser favicon**: Updated to baboon face emoji (🦧)
+  - Created `src/app/icon.svg` with SVG emoji favicon
+  - Added explicit `icons` metadata in layout.tsx for proper icon handling
+  - Modern SVG approach for crisp rendering at all sizes
+
+### Changed
 - **About Us page** (`src/app/[locale]/about/page.tsx`): Complete redesign with 3D animations and Three.js
   - Removed Team Section (ทีมผู้นำ) as requested
   - Added framer-motion for advanced animations

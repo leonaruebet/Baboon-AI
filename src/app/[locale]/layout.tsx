@@ -32,6 +32,9 @@ export async function generateMetadata({
         keywords: isEn
             ? ["Thai AI Assistant", "Personal Assistant", "Note Summarizer", "Task Planner", "Baboon Secretary"]
             : ["AI ภาษาไทย", "ผู้ช่วยส่วนตัว", "สรุปโน้ต", "วางแผนงาน", "เลขาบาบูน"],
+        icons: {
+            icon: "/icon.svg",
+        },
     };
 }
 

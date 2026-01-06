@@ -10,7 +10,8 @@
       "Bash(curl:*)",
       "Bash(npm install:*)",
       "WebFetch(domain:docs.google.com)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
