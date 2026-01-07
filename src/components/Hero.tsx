@@ -5,7 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Play, Bot } from "lucide-react";
 
-export function Hero({ locale, dict }: { locale: string; dict: any }) {
+import type { HeroDict } from "@/types/dictionary";
+
+export function Hero({ dict }: { dict: HeroDict }) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (

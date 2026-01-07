@@ -2,7 +2,9 @@
 
 import { Sparkles, Zap, Star } from "lucide-react";
 
-export function Slogan({ locale, dict }: { locale: string; dict: any }) {
+import type { SloganDict } from "@/types/dictionary";
+
+export function Slogan({ dict }: { dict: SloganDict }) {
     return (
         <section
             className="py-24 px-6 relative overflow-hidden bg-primary cursor-monkey"

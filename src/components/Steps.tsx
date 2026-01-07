@@ -1,14 +1,15 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Image, FileText, Receipt, Bell, Brain, Check, Send, Sparkles, Bot, Monitor, Smartphone, Play, MessageSquare, Clock, Calendar, CheckCircle } from "lucide-react";
+import { FileText, Receipt, Bell, Brain, Check, Sparkles, Bot, Play, MessageSquare, Clock, Calendar, CheckCircle } from "lucide-react";
 import { useState } from "react";
+import type { StepsDict } from "@/types/dictionary";
 
 /**
  * Steps section with vertical stepper on left and visualization on right.
  * Interactive: clicking a step shows its visualization.
  */
-export function Steps({ locale, dict }: { locale: string; dict: any }) {
+export function Steps({ dict }: { dict: StepsDict }) {
     const [activeStep, setActiveStep] = useState(0);
 
     const steps = [

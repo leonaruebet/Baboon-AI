@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Globe } from "lucide-react";
 
-export function Header({ locale, dict }: { locale: string; dict: any }) {
+import type { NavigationDict } from "@/types/dictionary";
+
+export function Header({ locale, dict }: { locale: string; dict: NavigationDict }) {
     const pathname = usePathname();
     const otherLocale = locale === "th" ? "en" : "th";
 

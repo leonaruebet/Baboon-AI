@@ -2,7 +2,9 @@
 
 import { Quote, User } from "lucide-react";
 
-export function Trust({ locale, dict }: { locale: string; dict: any }) {
+import type { TrustDict } from "@/types/dictionary";
+
+export function Trust({ dict }: { dict: TrustDict }) {
     return (
         <section className="py-24 px-6 overflow-hidden">
             <div className="max-w-6xl mx-auto">

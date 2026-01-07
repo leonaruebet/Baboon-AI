@@ -1,8 +1,48 @@
 "use client";
 
-import { useRef, useMemo } from "react";
+import { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
+
+/**
+ * Generates seeded random particle data outside of render cycle
+ * Uses deterministic seed-based generation for stable results
+ */
+function generateParticleData(count: number) {
+  const positions = new Float32Array(count * 3);
+  const colors = new Float32Array(count * 3);
+  const sizes = new Float32Array(count);
+
+  const color = new THREE.Color();
+  const orangeColors = ["#fb923c", "#fdba74", "#fed7aa", "#f97316", "#ea580c"];
+
+  // Use deterministic seeded values based on index
+  for (let i = 0; i < count; i++) {
+    // Deterministic pseudo-random using golden ratio
+    const phi1 = (i * 0.618033988749895) % 1;
+    const phi2 = ((i * 2) * 0.618033988749895) % 1;
+    const phi3 = ((i * 3) * 0.618033988749895) % 1;
+
+    const radius = 15 + phi1 * 10;
+    const theta = phi2 * Math.PI * 2;
+    const phi = Math.acos(2 * phi3 - 1);
+
+    positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
+    positions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
+    positions[i * 3 + 2] = radius * Math.cos(phi);
+
+    // Deterministic color selection
+    color.set(orangeColors[i % orangeColors.length]);
+    colors[i * 3] = color.r;
+    colors[i * 3 + 1] = color.g;
+    colors[i * 3 + 2] = color.b;
+
+    // Deterministic size
+    sizes[i] = phi1 * 0.5 + 0.1;
+  }
+
+  return { positions, colors, sizes };
+}
 
 /**
  * ParticleField Component
@@ -18,37 +58,8 @@ export function ParticleField({ count = 200 }: { count?: number }) {
 
   const pointsRef = useRef<THREE.Points>(null);
 
-  // Generate particle positions
-  const particles = useMemo(() => {
-    const positions = new Float32Array(count * 3);
-    const colors = new Float32Array(count * 3);
-    const sizes = new Float32Array(count);
-
-    const color = new THREE.Color();
-    const orangeColors = ["#fb923c", "#fdba74", "#fed7aa", "#f97316", "#ea580c"];
-
-    for (let i = 0; i < count; i++) {
-      // Random position in a sphere
-      const radius = 15 + Math.random() * 10;
-      const theta = Math.random() * Math.PI * 2;
-      const phi = Math.acos(2 * Math.random() - 1);
-
-      positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
-      positions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
-      positions[i * 3 + 2] = radius * Math.cos(phi);
-
-      // Random orange color
-      color.set(orangeColors[Math.floor(Math.random() * orangeColors.length)]);
-      colors[i * 3] = color.r;
-      colors[i * 3 + 1] = color.g;
-      colors[i * 3 + 2] = color.b;
-
-      // Random size
-      sizes[i] = Math.random() * 0.5 + 0.1;
-    }
-
-    return { positions, colors, sizes };
-  }, [count]);
+  // Use useState with lazy initializer for stable particle data
+  const [particles] = useState(() => generateParticleData(count));
 
   useFrame((state) => {
     if (pointsRef.current) {
@@ -91,6 +102,25 @@ export function ParticleField({ count = 200 }: { count?: number }) {
 }
 
 /**
+ * Generates deterministic orbital particle data
+ */
+function generateOrbitalParticles(count: number) {
+  return Array.from({ length: count }, (_, i) => {
+    // Deterministic pseudo-random using golden ratio
+    const phi1 = (i * 0.618033988749895) % 1;
+    const phi2 = ((i * 2) * 0.618033988749895) % 1;
+    const phi3 = ((i * 3) * 0.618033988749895) % 1;
+
+    return {
+      angle: (i / count) * Math.PI * 2,
+      speed: 0.2 + phi1 * 0.3,
+      yOffset: (phi2 - 0.5) * 2,
+      size: 0.02 + phi3 * 0.04,
+    };
+  });
+}
+
+/**
  * OrbitalParticles Component
  *
  * Particles that orbit around a central point.
@@ -106,14 +136,8 @@ export function OrbitalParticles({
 }) {
   const groupRef = useRef<THREE.Group>(null);
 
-  const particles = useMemo(() => {
-    return Array.from({ length: count }, (_, i) => ({
-      angle: (i / count) * Math.PI * 2,
-      speed: 0.2 + Math.random() * 0.3,
-      yOffset: (Math.random() - 0.5) * 2,
-      size: 0.02 + Math.random() * 0.04,
-    }));
-  }, [count]);
+  // Use useState with lazy initializer for stable particle data
+  const [particles] = useState(() => generateOrbitalParticles(count));
 
   useFrame((state) => {
     if (groupRef.current) {

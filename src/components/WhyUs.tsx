@@ -10,8 +10,10 @@ import { Shield, Zap, Heart, Clock, Users, Award } from "lucide-react";
  * @param dict - Dictionary object containing translated content
  * @returns JSX element for the Why Us section
  */
-export function WhyUs({ locale, dict }: { locale: string; dict: any }) {
-  console.log(`[WhyUs] Rendering component for locale: ${locale}`);
+import type { WhyUsDict } from "@/types/dictionary";
+
+export function WhyUs({ dict }: { dict: WhyUsDict }) {
+  console.log(`[WhyUs] Rendering component`);
 
   const icons = [
     <Zap key="zap" className="w-8 h-8" />,
@@ -40,7 +42,7 @@ export function WhyUs({ locale, dict }: { locale: string; dict: any }) {
 
         {/* Reasons Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {dict.reasons.map((reason: { title: string; description: string }, index: number) => (
+          {dict.reasons.map((reason, index) => (
             <div
               key={index}
               className="group p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-foreground/5 shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1"

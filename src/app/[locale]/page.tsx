@@ -21,14 +21,14 @@ export default async function Home({
   return (
     <main className="min-h-screen bg-background selection:bg-primary/20 transition-colors duration-500">
       <Header locale={locale} dict={dict.navigation} />
-      <Hero locale={locale} dict={dict.hero} />
+      <Hero dict={dict.hero} />
       <Benefits locale={locale} dict={dict.benefits} />
-      <Slogan locale={locale} dict={dict.slogan} />
-      <Steps locale={locale} dict={dict.steps} />
+      <Slogan dict={dict.slogan} />
+      <Steps dict={dict.steps} />
       <Compare locale={locale} dict={dict.compare} />
-      <WhyUs locale={locale} dict={dict.whyUs} />
-      <Trust locale={locale} dict={dict.trust} />
-      <FAQ locale={locale} dict={dict.faq} />
+      <WhyUs dict={dict.whyUs} />
+      <Trust dict={dict.trust} />
+      <FAQ dict={dict.faq} />
       <Footer locale={locale} dict={dict.footer} />
     </main>
   );

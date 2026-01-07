@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Mail, Headphones, MapPin, Clock, ArrowRight, MessageCircle, Send } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
+import type { Dictionary } from "@/types/dictionary";
 
 /** Google Form configuration */
 const GOOGLE_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSflywmYig852Q-YZOeC7QOnobo6CDQzBBEB6yTvK7l0B_Ro1Q/formResponse";
@@ -34,7 +35,7 @@ export default function ContactPage({
   params: Promise<{ locale: string }>;
 }) {
   const [locale, setLocale] = useState<string>("en");
-  const [dict, setDict] = useState<any>(null);
+  const [dict, setDict] = useState<Dictionary | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const formRef = useRef<HTMLFormElement>(null);

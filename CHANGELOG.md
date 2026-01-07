@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Fixed
+- **ESLint and TypeScript errors**: Comprehensive code quality improvements
+  - Created `src/types/dictionary.ts` with full type definitions for all i18n dictionaries
+  - Replaced all `any` types with proper typed interfaces across components:
+    - `NavigationDict`, `HeroDict`, `SloganDict`, `StepsDict`, `TrustDict`, `FooterDict`
+    - `FAQDict`, `FAQItem`, `WhyUsDict`, `WhyUsReason`, `ContactUsDict`
+  - Fixed unused imports in `Steps.tsx` (removed `Image`, `Send`, `Monitor`, `Smartphone`)
+  - Fixed unused `locale` parameters in multiple components by removing from props:
+    - `Hero`, `Slogan`, `Steps`, `Trust`, `FAQ`, `WhyUs`
+  - Fixed `react-hooks/purity` errors in `ParticleField.tsx`:
+    - Replaced `Math.random()` calls with deterministic golden ratio-based generation
+    - Used `useState` with lazy initializer for stable particle data
+    - Extracted particle generation to pure functions (`generateParticleData`, `generateOrbitalParticles`)
+  - Fixed `react-hooks/refs` errors by replacing `useRef` access during render with `useState`
+
 ### Changed
 - **Steps section**: Complete overhaul with vertical stepper design
   - Redesigned from grid layout to vertical stepper on left + visualization area on right

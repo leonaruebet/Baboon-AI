@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 
-export function Footer({ locale, dict }: { locale: string; dict: any }) {
+import type { FooterDict } from "@/types/dictionary";
+
+export function Footer({ locale, dict }: { locale: string; dict: FooterDict }) {
     return (
         <footer className="py-20 px-6 border-t border-primary/5 bg-background">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 font-medium">
